@@ -12,8 +12,8 @@
 ├── MNIST_data/            # 存放 MNIST 数据集（自动下载）
 ├── pictures/              # 保存实验结果图（如预测对比图）
 ├── mnist_models/          # 保存训练好的模型权重（.h5 文件）
-├── predictionsonflow.py   # 预测脚本：加载模型并对指定图像进行预测
-└── train(tensorflow).py   # 训练脚本：训练模型并保存权重
+├── predict.py   # 预测脚本：加载模型并对指定图像进行预测
+└── train.py   # 训练脚本：训练模型并保存权重
 ```
 
 ---
@@ -37,7 +37,7 @@ pip install tensorflow numpy matplotlib
 ### 1. 训练模型
 运行训练脚本：
 ```bash
-python train(tensorflow).py
+python train.py
 ```
 - **输入需要训练的迭代次数**（例如 `5000`）。
 - 每 1000 次迭代输出训练损失和准确率。
@@ -47,7 +47,7 @@ python train(tensorflow).py
 ### 2. 使用模型进行预测
 运行预测脚本：
 ```bash
-python predictionsonflow.py
+python predict.py
 ```
 - **输入图像编号**（0-9999，对应测试集中的 10000 张图像）。
 - 程序会显示图像、预测值和真实标签，并输出预测概率分布。
